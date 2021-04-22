@@ -1,0 +1,40 @@
+Задание 1.
+ls -la /home/tester
+less /etc/passwd
+more /etc/chrony/chrony.conf
+cat /var/log/dmesg
+
+Задание 2.
+Команда cat склеивает два и более файлов, выводит на экран.
+man cat
+cd ~
+echo "This is a test file number 001" > somefile1.txt
+nano sometext2.txt
+cat sometext1.txt sometext2.txt > output.txt
+less output.txt
+
+Задание 3.
+mv output.txt output.log.20210421
+
+Задание 4.
+tester@geekubuntu:~$ pwd
+/home/tester
+mkdir temp20210421
+mv *.txt temp20210421/
+rm -rf temp20210421/
+
+Задание 5.
+ls -d .!(|.) | wc -l
+
+Задание 6.
+cd ~
+cat /etc/* > all-files-in-etc.txt 2> oh-my-goodness-so-many-errors.log
+
+Задание 7.
+kill -L (список возможных сигналов)
+ps aux | grep myProgramName (посмотреть пид глазами)
+kill -15 пид (попросить по хорошему, или -9 сразу)
+
+Задание 8.
+tester@geekubuntu:~$ ls -lA /etc --ignore="Итого" | cut -c 1-10 > ~/temp20210423.txt && sort ~/temp20210423.txt | uniq -u | wc -l
+6
